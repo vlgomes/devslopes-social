@@ -1,14 +1,14 @@
 //
-//  FancyView.swift
+//  CircleView.swift
 //  devslopes-social
 //
-//  Created by Vasco Gomes on 03/03/2017.
+//  Created by Vasco Gomes on 06/03/2017.
 //  Copyright © 2017 Vasco Gomes. All rights reserved.
 //
 
 import UIKit
 
-class FancyView: UIView {
+class CircleView: UIImageView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +22,14 @@ class FancyView: UIView {
         //how far it goes in height
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         layer.cornerRadius = 2.0
-        
     }
-
+    
+    //round the corners of the image
+    override func layoutSubviews() {
+        //this isn't in the awake from nib because the width of the button isn't available yet
+        super.layoutSubviews()
+        
+        //perfect round button
+        layer.cornerRadius = self.frame.width / 2
+    }
 }

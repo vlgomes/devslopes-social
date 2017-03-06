@@ -19,6 +19,7 @@
 		279290821E699AC200772F7D /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279290811E699AC200772F7D /* FancyField.swift */; };
 		279290841E699B9400772F7D /* FancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279290831E699B9400772F7D /* FancyButton.swift */; };
 		2792908A1E69C7C300772F7D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279290891E69C7C300772F7D /* FeedVC.swift */; };
+		27FD3BBF1E6D87C600B9E9DC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD3BBE1E6D87C600B9E9DC /* CircleView.swift */; };
 		3E82B009B9437C9FF3814639 /* Pods_devslopes_social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4036434C3AF8B824EE3480 /* Pods_devslopes_social.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		279290831E699B9400772F7D /* FancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyButton.swift; sourceTree = "<group>"; };
 		279290881E69BA6600772F7D /* devslopes-social.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "devslopes-social.entitlements"; sourceTree = "<group>"; };
 		279290891E69C7C300772F7D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		27FD3BBE1E6D87C600B9E9DC /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		304AF918FD90B7D675A172CE /* Pods-devslopes-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.debug.xcconfig"; sourceTree = "<group>"; };
 		CC4036434C3AF8B824EE3480 /* Pods_devslopes_social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_devslopes_social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				2792907F1E69999C00772F7D /* RoundButton.swift */,
 				279290811E699AC200772F7D /* FancyField.swift */,
 				279290831E699B9400772F7D /* FancyButton.swift */,
+				27FD3BBE1E6D87C600B9E9DC /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FD3BBF1E6D87C600B9E9DC /* CircleView.swift in Sources */,
 				279290821E699AC200772F7D /* FancyField.swift in Sources */,
 				2732E6B01E6882EB00962DC1 /* SignInVC.swift in Sources */,
 				279290801E69999C00772F7D /* RoundButton.swift in Sources */,
