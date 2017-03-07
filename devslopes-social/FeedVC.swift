@@ -12,9 +12,11 @@ import SwiftKeychainWrapper
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var captionField: FancyField!
     @IBOutlet var imageAdd: CircleView!
     @IBOutlet weak var tableView: UITableView!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -82,6 +84,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let image = info [UIImagePickerControllerEditedImage] as? UIImage{
             imageAdd.image = image
+            imageSelected = true
         } else {
             print("VASCO: A valid image wasn't selected")
         }
@@ -97,6 +100,48 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         try! FIRAuth.auth()?.signOut()
         
         performSegue(withIdentifier: "goToSignIn", sender: nil)
+    }
+    
+    @IBAction func postButtonTapped(_ sender: Any) {
+        guard let caption = captionField.text, caption != "" else {
+            print("VASCO: Caption must be entered!")
+            let alertController = UIAlertController(title: "Alert", message:
+                "Caption must be entered!", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            
+             self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        guard let img = imageAdd.image, imageSelected == true else {
+            print("VASCO: A image must be selected!")
+            let alertController = UIAlertController(title: "Alert", message:
+                "A image must be selected!", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            
+             self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2){
+            
+            let imgUid = NSUUID().uuidString
+            let metadata =  FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.dataService.REF_POST_IMAGES.child(imgUid).put(imgData,metadata: metadata) { (metadata,error) in
+                if error != nil {
+                    print ("VASCO: Unable to upload image to Firebase Storage")
+                }
+                else {
+                    print ("VASCO: Successfully uploaded image to Firebase storage")
+                    let downloadUrRL =  metadata?.downloadURL()?.absoluteString
+                }
+                
+            }
+        }
     }
     
     @IBAction func addImageTapped(_ sender: Any) {

@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "devslopes-social/FeedVC.swift"
-            timestampString = "510593597.675717"
+            timestampString = "510596251.204382"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "FeedVC"
             landmarkType = "3">
             <Locations>
