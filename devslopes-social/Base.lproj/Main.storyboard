@@ -258,7 +258,7 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vlgomes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQL-ga-xZV">
-                                                                            <rect key="frame" x="60" y="17.5" width="207" height="25"/>
+                                                                            <rect key="frame" x="60" y="18" width="207" height="25"/>
                                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                                                             <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -288,16 +288,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OVH-lq-J2C">
-                                                            <rect key="frame" x="258.5" y="329" width="76.5" height="22"/>
+                                                            <rect key="frame" x="258" y="329" width="77" height="22"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VB-lf-iT5">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="35.5" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="36" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-1V-4Ns">
-                                                                    <rect key="frame" x="40.5" y="0.0" width="36" height="22"/>
+                                                                    <rect key="frame" x="41" y="0.0" width="36" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -377,7 +377,7 @@
         <image name="empty-heart" width="70" height="70"/>
         <image name="f" width="352" height="328"/>
         <image name="placeholder" width="567" height="312"/>
-        <image name="profile" width="113" height="155"/>
+        <image name="profile" width="395" height="395"/>
         <image name="sign-out" width="92" height="65"/>
     </resources>
 </document>

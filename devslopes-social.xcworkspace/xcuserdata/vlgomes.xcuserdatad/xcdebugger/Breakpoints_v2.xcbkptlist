@@ -19,5 +19,68 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "devslopes-social/FeedVC.swift"
+            timestampString = "510593597.675717"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "FeedVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_9C01F7B9603868B57E2BC0C246EDC7DF_func0"
+                  moduleName = "devslopes-social"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vlgomes/Documents/devslopes-social/devslopes-social/FeedVC.swift"
+                  timestampString = "510594097.193605"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static devslopes_social.FeedVC.imageCache.getter : __ObjC.NSCache&lt;__ObjC.NSString, __ObjC.UIImage&gt;"
+                  moduleName = "devslopes-social"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vlgomes/Documents/devslopes-social/devslopes-social/FeedVC.swift"
+                  timestampString = "510594097.196697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static devslopes_social.FeedVC.imageCache.setter : __ObjC.NSCache&lt;__ObjC.NSString, __ObjC.UIImage&gt;"
+                  moduleName = "devslopes-social"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vlgomes/Documents/devslopes-social/devslopes-social/FeedVC.swift"
+                  timestampString = "510594097.198404"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
