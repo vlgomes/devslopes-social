@@ -92,6 +92,28 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
+    
+    func postToFirebase(imgUrl: String){
+        
+        let post : Dictionary<String, AnyObject> = [
+            "caption": captionField.text! as AnyObject,
+            "imageUrl": imgUrl as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        
+        //we are creating a uid on the fly
+        let firebasePost = DataService.dataService.REF_POSTS.childByAutoId()
+        
+        firebasePost.setValue(post)
+        
+        //reseting everything
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named:"add-image")
+        
+        tableView.reloadData()
+    }
+    
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.remove(key: KEY_UID)
         
@@ -137,9 +159,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 }
                 else {
                     print ("VASCO: Successfully uploaded image to Firebase storage")
-                    let downloadUrRL =  metadata?.downloadURL()?.absoluteString
+                    let downloadURL =  metadata?.downloadURL()?.absoluteString
+                    if let url = downloadURL{
+                        self.postToFirebase(imgUrl: url)
+                    }
                 }
-                
             }
         }
     }
