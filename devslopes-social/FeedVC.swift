@@ -53,9 +53,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let post = posts[indexPath.row]
         
-        print("VASCO: \(post.caption)")
-        
-        return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell{
+            cell.configureCell(post: post)
+            
+            return cell
+        } else {
+            return PostCell()
+        }
     }
     
     @IBAction func signOutTapped(_ sender: Any) {
