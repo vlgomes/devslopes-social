@@ -15,6 +15,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet var captionField: FancyField!
     @IBOutlet var imageAdd: CircleView!
     @IBOutlet weak var tableView: UITableView!
+
+    
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
     
@@ -36,6 +38,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     func getPosts(){
         DataService.dataService.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            self.posts = [] 
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot]{
                 for snap in snapshot{
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
@@ -66,15 +71,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let img = FeedVC.imageCache.object(forKey: post.imageUrl as NSString){
                 cell.configureCell(post: post, img: img)
-                
-                return cell
             } else {
                 cell.configureCell(post: post)
-                
-                return cell
             }
             
-            
+            return cell
         } else {
             return PostCell()
         }
